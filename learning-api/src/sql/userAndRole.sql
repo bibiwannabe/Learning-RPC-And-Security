@@ -1,0 +1,34 @@
+create table user_info(
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT'用户id',
+  `user_name` VARCHAR(20) NOT NULL UNIQUE DEFAULT "" COMMENT '用户名',
+  `user_password` VARCHAR(20) NOT NULL DEFAULT "" COMMENT '用户密码',
+  `deleted` INT NOT NULL DEFAULT 0 COMMENT '是否删除',
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` TIMESTAMP COMMENT '更新时间'
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE role(
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT'角色id',
+  `role_name` VARCHAR(20) NOT NULL UNIQUE DEFAULT "" COMMENT '角色名称',
+  `deleted` INT NOT NULL DEFAULT 0 COMMENT '是否删除',
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` TIMESTAMP COMMENT '更新时间'
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE permission(
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT'权限id',
+  `permission_desc` VARCHAR(20) NOT NULL UNIQUE DEFAULT "" COMMENT '权限描述',
+  `deleted` INT NOT NULL DEFAULT 0 COMMENT '是否删除',
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` TIMESTAMP COMMENT '更新时间'
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE role_permission_map(
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT'映射id',
+  `role_id` INT NOT NULL COMMENT'角色id',
+  `permission_id` INT NOT NULL COMMENT'权限id',
+  `deleted` INT NOT NULL DEFAULT 0 COMMENT '是否删除',
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` TIMESTAMP COMMENT '更新时间',
+  UNIQUE KEY `uk_role_permission_map`(`role_id`,`permission_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
