@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bibi</groupId>
+    <artifactId>learning-common</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <distributionManagement>
+        <repository>
+            <id>libiyi</id>
+            <url>http://120.79.64.147:8080/nexus-2.14.10-01/content/repositories/libiyi</url>
+        </repository>
+    </distributionManagement>
+
+
+</project>

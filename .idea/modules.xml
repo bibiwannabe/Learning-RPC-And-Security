@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Learning-RPC-And-Security.iml" filepath="$PROJECT_DIR$/.idea/Learning-RPC-And-Security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learning-common/learning-common.iml" filepath="$PROJECT_DIR$/learning-common/learning-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learning-api/web.iml" filepath="$PROJECT_DIR$/learning-api/web.iml" />
+    </modules>
+  </component>
+</project>
